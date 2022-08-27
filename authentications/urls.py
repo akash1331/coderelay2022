@@ -1,4 +1,4 @@
-"""codeapp URL Configuration
+"""authentications URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -15,13 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from codeapp.views import *
+from .views import *
 
 urlpatterns = [
-    path('dataapi/', dataApi.as_view(), name='dataapi'),
-    path('dataapi/<int:id>', datadetail.as_view(), name='dataapii'),
-    path('typeapi/', typeApi.as_view(), name='typeapi'),
-    path('filter/', typefilter.as_view(), name='filter'),
-    path('search/<str:id>', typefilter.as_view(), name='filter'),
-
+    path('useraccount/',accountApi.as_view()),
+    path('userfilter/', Userbasedfilter.as_view()),
 ]
