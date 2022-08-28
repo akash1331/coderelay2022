@@ -1,0 +1,7 @@
+username: admin
+pw: admin
+email:admin@admin.com
+
+test
+trialstestexperiment@gmail.com
+test123
