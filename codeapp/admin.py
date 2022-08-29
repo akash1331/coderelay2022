@@ -4,5 +4,11 @@ from codeapp.models import *
 
 admin.site.site_header = 'CodeRelay Admin'
 
-admin.site.register(itemstype)
-admin.site.register(itemdata)
+class itemdataAdminSite(admin.ModelAdmin):
+    list_display = ['Name','type','Owner','dateuploaded','Desc','cost']
+
+class itemtypeAdminSite(admin.ModelAdmin):
+    list_display = ['types_of_item']
+
+admin.site.register(itemstype,itemtypeAdminSite)
+admin.site.register(itemdata,itemdataAdminSite)
